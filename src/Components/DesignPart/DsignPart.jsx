@@ -6,7 +6,7 @@ function DsignPart() {
 
 <div className='container m-auto'>
 
-<header>
+<header className='mt-5'>
  <nav>
  <div className="navbar bg-base-100">
 <div className="navbar-start">
@@ -70,6 +70,12 @@ function DsignPart() {
 </div>
 </div>
 </header>
+<main>
+<div className='text-center mt-10'>
+<h1 className='text-6xl font-bold p-5'>Our Recipes</h1>
+        <p className='pb-5'>Indulge in a culinary adventure with our exquisite recipes crafted to tantalize your taste buds and ignite your passion for cooking.</p>
+</div>
+</main>
 
 </div>
     </div>
