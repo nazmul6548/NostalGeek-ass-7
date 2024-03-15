@@ -38,11 +38,11 @@ function App() {
 
   return (
     <>
-      <div className="container m-auto">
+      <div className="container m-auto ">
         <DsignPart></DsignPart>
 
-        <div className="grid grid-cols-12 mt-10 ">
-          <div className="grid grid-cols-2 gap-10 col-span-7">
+        <div className="grid grid-cols-12 mt-10  ">
+          <div className="grid grid-cols-2 gap-10 col-span-7 border-2 rounded-xl m-2">
             {cards.map((card) => (
               <SingleCard
                 singleCard={card}
@@ -50,7 +50,7 @@ function App() {
               ></SingleCard>
             ))}
           </div>
-          <div className="grid col-span-5">
+          <div className="grid col-span-5 border-2 rounded-xl m-2">
             <div>
               <h1 className="text-4xl font-bold text-center">
                 Want to cook : {product.length}
@@ -71,7 +71,7 @@ function App() {
 
               <div>
                 {product.map((item, index) => (
-                  <div className="flex justify-center bg-slate-600 m-3 bg-[#28282808] p-4">
+                  <div className="flex justify-center bg-[#28282808] m-3  p-4">
                     <p>{index + 1}</p>
                     <table className="table-auto w-full">
                       <thead>
@@ -116,7 +116,7 @@ function App() {
                 {
                   currentlyCooking.map((it,index) =>(
                    
-                <div className="flex  ">
+                <div className="flex  bg-[#28282808] m-3  p-4">
                   <p>{index+1}</p>
                 <table className="table-auto w-full">
                   <thead>
