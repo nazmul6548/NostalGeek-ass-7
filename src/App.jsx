@@ -9,6 +9,7 @@ function App() {
   const [cards, setCard] = useState([]);
   const [product, setProduct] = useState([]);
   const [currentlyCooking, setCurrentlyCooking] = useState([]);
+  
 
   useEffect(() => {
     fetch("fakedata.json")
@@ -32,6 +33,8 @@ function App() {
 
   const handlepreparingclick = (item) => {
     // console.log(item);
+    const upProduct = product.filter((p) => p.id !== item.id);
+    setProduct(upProduct)
     setCurrentlyCooking([...currentlyCooking,item])
   };
   console.log([currentlyCooking]);
@@ -58,7 +61,7 @@ function App() {
               <div className="divider w-3/4 m-auto pt-3"></div>
 
               <div className="flex ">
-                <table className="table-auto w-3/4">
+                <table className="table-auto w-3/4 mt-10">
                   <thead>
                     <tr>
                       <th className="px-4 py-2">Name</th>
@@ -86,7 +89,7 @@ function App() {
                     </table>
                     <button
                       onClick={() => handlepreparingclick(item)}
-                      class="btn bg-[#0BE58A]"
+                      className="btn bg-[#0BE58A]"
                     >
                       Preparing
                     </button>
@@ -95,13 +98,13 @@ function App() {
               </div>
 
               <div>
-                <h1 className="text-3xl font-bold text-center">
+                <h1 className="text-3xl font-bold text-center mt-10">
                   Currently cooking : {currentlyCooking.length} 
                 </h1>
                 <div className="divider w-3/4 m-auto pt-3"></div>
               </div>
               <div className="flex  ">
-                <table className="table-auto w-full">
+                <table className="table-auto w-full mt-10">
                   <thead>
                     <tr>
                       <th className="px-4 py-2">Name</th>
