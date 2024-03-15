@@ -44,8 +44,8 @@ function App() {
       <div className="container m-auto ">
         <DsignPart></DsignPart>
 
-        <div className="grid grid-cols-12 mt-10  ">
-          <div className="grid grid-cols-2 gap-10 col-span-7 border-2 rounded-xl m-2">
+        <div className="grid md:grid-cols-12 mt-10  ">
+          <div className="grid md:grid-cols-2 gap-10  md:col-span-7 border-2 rounded-xl m-2">
             {cards.map((card) => (
               <SingleCard
                 singleCard={card}
@@ -53,7 +53,7 @@ function App() {
               ></SingleCard>
             ))}
           </div>
-          <div className="grid col-span-5 border-2 rounded-xl m-2">
+          <div className="grid  md:col-span-5 border-2 rounded-xl m-2">
             <div>
               <h1 className="text-4xl font-bold text-center">
                 Want to cook : {product.length}
