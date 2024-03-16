@@ -52,8 +52,8 @@ function DsignPart() {
 <div className="hero-overlay bg-opacity-60"></div>
 <div className="hero-content text-center text-neutral-content">
 <div className="w-full">
- <h1 className="mb-5 text-4xl md:text-6xl font-bold text-white md:leading-[90px]">Discover an exceptional cooking class <br /> tailored for you!</h1>
- <p className="mb-5 w-4/5 m-auto">Are you looking to elevate your culinary skills and create delicious dishes like a professional chef? Look no further than our exceptional cooking classes tailored just for you! </p>
+ <h1 className="mb-5 text-5xl md:text-6xl font-bold text-white md:leading-[90px]">Discover an exceptional cooking class <br /> tailored for you!</h1>
+ <p className="mb-5 w-full md:w-4/5 m-auto">Are you looking to elevate your culinary skills and create delicious dishes like a professional chef? Look no further than our exceptional cooking classes tailored just for you! </p>
  <div className=''>
  <button className="btn bg-[#0BE58A] m-3 text-xl border-none">Explore Now</button>
  
