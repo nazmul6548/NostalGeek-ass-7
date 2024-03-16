@@ -44,7 +44,7 @@ function App() {
       <div className="container m-auto ">
         <DsignPart></DsignPart>
 
-        <div className="grid md:grid-cols-12 mt-10  ">
+        <div className=" grid md:grid-cols-12 mt-10  ">
           <div className="grid md:grid-cols-2 gap-10  md:col-span-7 border-2 rounded-xl m-2">
             {cards.map((card) => (
               <SingleCard
@@ -64,7 +64,7 @@ function App() {
                 <table className="table-auto w-3/4 mt-10">
                   <thead>
                     <tr>
-                      <th className="px-4 py-2">Name</th>
+                      <th className="px-4 py-2 flex">Name</th>
                       <th className="px-4 py-2">Time</th>
                       <th className="px-4 py-2">Calories</th>
                     </tr>
@@ -74,16 +74,16 @@ function App() {
 
               <div>
                 {product.map((item, index) => (
-                  <div className="flex justify-center bg-[#28282808] m-3  p-4">
-                    <p>{index + 1}</p>
-                    <table className="table-auto w-full">
+                  <div className="flex justify-center items-center rounded-lg max-w-full bg-[#28282808] m-3  p-4">
+                    <p>{index + 1}.</p>
+                    <table className="table-auto md:w-full">
                       <thead>
                         <tr>
-                          <th className="px-4 py-2">
+                          <th className="">
                             {item.recipe_name.slice(0, 8)}
                           </th>
                           <th className="px-4 py-2">{item.preparing_time}</th>
-                          <th className="px-4 py-2">{item.calories}</th>
+                          <th className="px-4 py-2">{item.calories.slice(0,7)}</th>
                         </tr>
                       </thead>
                     </table>
@@ -119,14 +119,14 @@ function App() {
                 {
                   currentlyCooking.map((it,index) =>(
                    
-                <div className="flex  bg-[#28282808] m-3  p-4">
-                  <p>{index+1}</p>
+                <div className="flex items-center rounded-lg max-w-full  bg-[#28282808] m-3  p-4">
+                  <p>{index+1}.</p>
                 <table className="table-auto w-full">
                   <thead>
                     <tr>
-                      <th className="px-4 py-2">{it.recipe_name.slice(0, 8)}</th>
+                      <th className="">{it.recipe_name.slice(0, 8)}</th>
                       <th className="px-4 py-2">{it.preparing_time}</th>
-                      <th className="px-4 py-2">{it.calories}</th>
+                      <th className="px-4 py-2">{it.calories.slice(0,7)}</th>
                     </tr>
                   </thead>
                 </table>
