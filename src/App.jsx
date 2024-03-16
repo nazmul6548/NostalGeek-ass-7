@@ -38,7 +38,8 @@ function App() {
     setCurrentlyCooking([...currentlyCooking,item])
   };
   console.log([currentlyCooking]);
-
+const totatTime = currentlyCooking.reduce((total,item) => total+parseInt(item.preparing_time),0 )
+const totalCal = currentlyCooking.reduce((total,item) => total+parseInt(item.calories),0 )
   return (
     <>
       <div className="container m-auto ">
@@ -134,6 +135,11 @@ function App() {
 
                   ) )
                 }
+              </div>
+
+              <div className="mt-10 flex justify-around font-bold">
+                <h1>Total Time : {totatTime} </h1>
+                <h1>Total Calories : {totalCal} </h1>
               </div>
             </div>
           </div>
